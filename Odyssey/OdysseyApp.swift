@@ -11,7 +11,7 @@ import SwiftUI
 struct OdysseyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(model: currency)
         }
     }
 }

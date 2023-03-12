@@ -8,28 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var model: [Currency]
+    
     var body: some View {
         ZStack {
             Color(red: 1.0, green: 0.945, blue: 0.929)
                 .ignoresSafeArea()
             VStack{
                 header
-                
-              VStack(alignment: .leading) {
-                    Text("scrum.title")
-                                 .font(.headline)
-                    Rectangle()
-                        .frame(width: 350, height: 200)
-                        .cornerRadius(20)
-                        .foregroundColor(.green)
-                    Rectangle()
-                        .frame(width: 350, height: 200)
-                        .cornerRadius(20)
-                        .foregroundColor(.blue)
+                Spacer()
+                List {
+                    ForEach(model, id: \.currencyCodeA) { model in
+                       CardView(currency: model)
+                    }
                 }
-                    
+                Spacer()
             }
-              
         }
     
         
@@ -44,28 +39,9 @@ var header: some View {
         .font(.custom("GFSNeohellenic-Bold", size: 50))
 }
 
-var CardView: some View{
-   
-          VStack(alignment: .leading) {
-              Text("hello")
-                  .accessibilityAddTraits(.isHeader)
-                  .font(.headline)
-              Spacer()
-              HStack {
-                  Label("hello", systemImage: "person.3")
-                      .accessibilityLabel(" attendees")
-                  Spacer()
-                  Label("hello", systemImage: "clock")
-                      .accessibilityLabel("minute meeting")
-              }
-              .font(.caption)
-          }
-          .padding()
-          .foregroundColor(.green)
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(model: currency)
     }
 }
