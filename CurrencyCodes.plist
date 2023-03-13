@@ -2,15 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AED</key>	
+	<key>AED</key>
 	<string>784</string>
-	<key>AFN</key>	
+	<key>AFN</key>
 	<string>971</string>
-	<key>ALL</key>		
+	<key>ALL</key>
 	<string>8</string>
-	<key>AMD</key>	
+	<key>AMD</key>
 	<string>51</string>
-	<key>ANG</key>	
+	<key>ANG</key>
 	<string>532</string>
 	<key>AOA</key>
 	<string>973</string>
@@ -60,11 +60,11 @@
 	<string>976</string>
 	<key>CHE</key>
 	<string>947</string>
-	<key>CHF</key>	
+	<key>CHF</key>
 	<string>756</string>
 	<key>CHW</key>
 	<string>948</string>
-	<key>CLF</key>	
+	<key>CLF</key>
 	<string>990</string>
 	<key>CLP</key>
 	<string>152</string>

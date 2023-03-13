@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
+
 struct OdysseyApp: App {
+    var model = MonobankAPI()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(model: currency)
+            ContentView(model: model)
         }
     }
 }
+
+
+

@@ -12,12 +12,24 @@ struct CardView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack{
-                Text(String(currency.currencyNameA))
-                    .font(.headline)
+                if let code = GetCodeCurrency.getCodeForCurrency(String(currency.currencyCodeA)) {
+                    Text("\(code)")
+                        .font(.headline)
+                } else {
+                    Text("Unknown currency")
+                        .font(.headline)
+                }
                 Spacer()
                 VStack{
-                    Text(String(currency.currencyNameB))
-                        .font(.headline)
+                    if let code = GetCodeCurrency.getCodeForCurrency(String(currency.currencyCodeB)) {
+                        Text("\(code)")
+                            .font(.headline)
+                    } else {
+                        Text("Unknown currency")
+                            .font(.headline)
+                    }
+
+                       
                     if(currency.rateSell != 0){
                         Text(String(currency.rateSell))
                             .font(.headline)
@@ -31,7 +43,7 @@ struct CardView: View {
                     
                 }
             }
-        }
+        }.padding(15)
     }
 }
 

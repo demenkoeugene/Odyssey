@@ -61,10 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				F610CE1629BD2A2500C8B26A /* OdysseyApp.swift */,
-				F6EDC8B329BD407300950013 /* Model.swift */,
-				F62D178529BE06E100B5D24C /* ParsingJSON.swift */,
 				F610CE1829BD2A2500C8B26A /* ContentView.swift */,
 				F6EDC8B129BD3F4100950013 /* CardView.swift */,
+				F62D178929BE826F00B5D24C /* Model */,
 				F610CE1A29BD2A2600C8B26A /* Assets.xcassets */,
 				F610CE1C29BD2A2600C8B26A /* Preview Content */,
 			);
@@ -77,6 +76,15 @@
 				F610CE1D29BD2A2600C8B26A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F62D178929BE826F00B5D24C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F62D178529BE06E100B5D24C /* ParsingJSON.swift */,
+				F6EDC8B329BD407300950013 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

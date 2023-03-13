@@ -9,20 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var model: [Currency]
+    @ObservedObject var model: MonobankAPI
     
     var body: some View {
         ZStack {
             Color(red: 1.0, green: 0.945, blue: 0.929)
                 .ignoresSafeArea()
-            VStack{
-                header
-                Spacer()
-                List {
-                    ForEach(model, id: \.currencyCodeA) { model in
-                       CardView(currency: model)
-                    }
-                }
+            VStack {
+                          header
+                          Spacer()
+                          if model.currency.isEmpty {
+                              ProgressView()
+                          } else {
+                              ScrollView {
+                                  ForEach(model.currency, id: \.currencyCodeA) { currency in
+                                      CardView(currency: currency)
+                                  }
+                              }
+                          }
                 Spacer()
             }
         }
@@ -40,8 +44,8 @@ var header: some View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(model: currency)
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(model: currency)
+//    }
+//}
